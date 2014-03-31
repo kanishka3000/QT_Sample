@@ -22,6 +22,17 @@ void OrderBookFilter::AddInstruments( Instrument* pInstrument )
 	
 	QStringList sOrderBooks = sItemString.split("|");
 	
+	p_Widget->addItems(sOrderBooks);
+}
+
+void OrderBookFilter::SelectAndForward( Instrument* pInstrument, QString sOrderBook )
+{
+
+	QString sItemString  = pInstrument->map_Fields[s_DisplayField].toString();
+
+	QStringList sOrderBooks = sItemString.split("|");
 
 	p_Widget->addItems(sOrderBooks);
+
+	p_Widget->setCurrentIndex(p_Widget->findText(sOrderBook));
 }

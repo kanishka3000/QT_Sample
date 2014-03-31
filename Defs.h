@@ -29,6 +29,8 @@ public:
 	QString s_Symbol;
 	double d_Price;
 	double d_Size;
+	int i_Side;
+	int i_OrderID;
 };
 
 class ExecutionReport
@@ -37,7 +39,9 @@ public:
 	QString s_Symbol;
 	double d_Price;
 	double d_Size;
+	int i_Side;
 	int i_ExecutionType;
+	int i_OrderID;
 };
 
 

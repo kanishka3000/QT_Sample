@@ -74,13 +74,7 @@ void MainWnd::OnMenuClick( QAction* pAction )
 
 void MainWnd::SetStatusPane()
 {
-	//QHBoxLayout* pLayout = ui.BottomLayout;
 
-	//IndexItem* pIndex1 = new IndexItem(this);
-	//IndexItem* pIndex2 = new IndexItem(this);
-	//pLayout->addWidget(pIndex1);
-	//pLayout->addStretch();
-	//pLayout->addWidget(pIndex2);
 	ui.BottomPane->Init(p_Trader->p_IndexModel);
 
 	ui.BottomPane->IndexAddingBegin();

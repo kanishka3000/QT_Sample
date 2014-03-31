@@ -25,6 +25,7 @@ public:
 	Instrument* GetInstrument(QString sInstrumentID);
 	void OnBusinessData(NewOrder* pNewOrder);
 	double d_Time;
+	int i_OrderIDCount;
 	
 
 signals:

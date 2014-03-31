@@ -85,7 +85,9 @@ void OrderEntryCenterWnd::PopulateCurrentOrder()
 
 	p_CurrentOrder->d_Price =  txtPrice->value();
 	p_CurrentOrder->d_Size = txtSize->value();
+	p_CurrentOrder->i_Side = cmbSide->currentIndex();
 	p_CurrentOrder->s_Symbol = p_CurentInstrument->map_Fields["Symbol"].toString();
+	p_CurrentOrder->i_OrderID = -1;
 	
 }
 
@@ -107,8 +109,13 @@ void OrderEntryCenterWnd::PopulateFromExecutionReport( ExecutionReport* pReport 
 
 	txtPrice->setValue(pReport->d_Price);
 	txtSize->setValue(pReport->d_Size);
+	cmbSide->setCurrentIndex(pReport->i_Side);
 	Trader* pTrader = p_ParentWnd->GetTrader();
 
 	QString sInstrumentID = pTrader->ConverToInstrumentID(pReport->s_Symbol);
 	p_CurentInstrument = pTrader->GetInstrument(sInstrumentID);
+
+	PopulateCurrentOrder();
+
+	p_CurrentOrder->i_OrderID = pReport->i_OrderID;
 }

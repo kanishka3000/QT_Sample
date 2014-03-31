@@ -104,9 +104,10 @@ bool ExecReportCache::removeRows( int position, int rows, const QModelIndex &ind
 void ExecReportCache::AddRows( ExecutionReport* pExecutionReport )
 {
 	int iPostion = o_ExecutionReports.count();
-	beginInsertRows(QModelIndex(), iPostion,iPostion);
+	beginInsertRows(QModelIndex(), pExecutionReport->i_OrderID,pExecutionReport->i_OrderID);
 
-	o_ExecutionReports.insert(iPostion,pExecutionReport);
+	o_ExecutionReports.insert(pExecutionReport->i_OrderID,pExecutionReport);
+	
 
 	endInsertRows();
 }

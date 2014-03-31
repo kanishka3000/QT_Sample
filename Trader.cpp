@@ -18,6 +18,7 @@ Trader::Trader(void)
 {
 	d_Time = 0.0;
 	b_LoadUpComplete = false;
+	i_OrderIDCount = 0;
 }
 
 Trader::~Trader(void)
@@ -104,6 +105,15 @@ void Trader::OnBusinessData( NewOrder* pNewOrder )
 	pEx->d_Price = pNewOrder->d_Price;
 	pEx->d_Size = pNewOrder->d_Size;
 	pEx->s_Symbol = pNewOrder->s_Symbol;
+	pEx->i_Side = pNewOrder->i_Side;
+	if(pNewOrder->i_OrderID == -1)
+	{
+		pEx->i_OrderID = i_OrderIDCount++;
+	}
+	else
+	{
+		pEx->i_OrderID = pNewOrder->i_OrderID;
+	}
 	emit OnExecutionReport(pEx);
 
 	//delete pEx;

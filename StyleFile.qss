@@ -1,0 +1,11 @@
+OrderEntryCenterWnd{
+	background-color: green;	
+}
+
+QPushButton{
+color:red;
+}
+QSpinBox
+{
+	background-color: white;
+}

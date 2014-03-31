@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InstrumentSelector</class>
+ <widget class="QWidget" name="InstrumentSelector">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>45</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>45</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>514</width>
+    <height>45</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>InstrumentSelector</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QComboBox" name="cmbInsType"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cmbSymbol"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cmbExpDate"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cmbStrikePrice"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cmbOptionType"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cmbOrderBook"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

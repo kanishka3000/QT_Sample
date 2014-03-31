@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Style">
+        <file>StyleFile.qss</file>
+    </qresource>
+    <qresource prefix="/Images">
+        <file>F:/tmp/splash.png</file>
+    </qresource>
+</RCC>

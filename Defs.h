@@ -31,6 +31,9 @@ public:
 	double d_Size;
 	int i_Side;
 	int i_OrderID;
+	QString s_OrderTye;
+	QString s_TIF;
+	QString s_ExpiryDate;
 };
 
 class ExecutionReport
@@ -42,6 +45,10 @@ public:
 	int i_Side;
 	int i_ExecutionType;
 	int i_OrderID;
+
+	QString s_OrderTye;
+	QString s_TIF;
+	QString s_ExpiryDate;
 };
 
 

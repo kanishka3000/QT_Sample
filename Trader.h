@@ -17,7 +17,13 @@ class Trader:public QObject
 public:
 	Trader(void);
 	virtual ~Trader(void);
+
+	void SaveExecReports();
+
 	void Init();
+
+	void LoadExecReports();
+
 	virtual BaseWnd* CreateWnd(Defs::Windows eWindow, bool bSingleInstance = false);
 	virtual void LoadInstruments();
 	void GetAllInstruments(QList<Instrument*>& lstInstruments);

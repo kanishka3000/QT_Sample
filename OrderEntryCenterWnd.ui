@@ -16,61 +16,6 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>30</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Price</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>169</x>
-     <y>32</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Size</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnSubmit">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>80</y>
-     <width>75</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Submit</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="cmbSide">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>90</y>
-     <width>101</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="currentIndex">
-    <number>-1</number>
-   </property>
-   <property name="maxCount">
-    <number>3</number>
-   </property>
-  </widget>
   <widget class="QWidget" name="CenterWidget" native="true">
    <property name="geometry">
     <rect>
@@ -80,36 +25,145 @@
      <height>221</height>
     </rect>
    </property>
-   <widget class="QDoubleSpinBox" name="txtPrice">
+   <property name="Class" stdset="0">
+    <string>OrderEntryColorPanel</string>
+   </property>
+   <widget class="QPushButton" name="btnSubmit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>30</y>
-      <width>91</width>
-      <height>22</height>
+      <x>370</x>
+      <y>60</y>
+      <width>75</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>Buy</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="txtSize">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>30</y>
-      <width>91</width>
-      <height>22</height>
+      <x>20</x>
+      <y>60</y>
+      <width>340</width>
+      <height>41</height>
      </rect>
     </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Side</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Price</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="cmbSide">
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <property name="maxCount">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDoubleSpinBox" name="txtPrice"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QSpinBox" name="txtSize">
+       <property name="maximum">
+        <number>20000000</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>TIF</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Expiry Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Order Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="cmbTIF"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QComboBox" name="cmbOrderType"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QDoubleSpinBox" name="spinStopPrice"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Stop Price</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateTimeEdit" name="tmeExpiry">
+       <property name="displayFormat">
+        <string>yyyy:M:s</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
-  <zorder>CenterWidget</zorder>
-  <zorder>btnSubmit</zorder>
-  <zorder>cmbSide</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
   <tabstop>cmbSide</tabstop>
+  <tabstop>txtPrice</tabstop>
+  <tabstop>txtSize</tabstop>
+  <tabstop>cmbTIF</tabstop>
+  <tabstop>tmeExpiry</tabstop>
+  <tabstop>cmbOrderType</tabstop>
+  <tabstop>spinStopPrice</tabstop>
   <tabstop>btnSubmit</tabstop>
  </tabstops>
  <resources/>
@@ -121,8 +175,8 @@
    <slot>OnSideChanged(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>117</x>
-     <y>102</y>
+     <x>109</x>
+     <y>69</y>
     </hint>
     <hint type="destinationlabel">
      <x>315</x>
@@ -130,8 +184,42 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>cmbTIF</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>OrderEntryCenterWnd</receiver>
+   <slot>OnTIFChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmbOrderType</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>OrderEntryCenterWnd</receiver>
+   <slot>OnOrderTypeChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>OnSideChanged(int)</slot>
+  <slot>OnTIFChanged(QString)</slot>
+  <slot>OnOrderTypeChanged(QString)</slot>
  </slots>
 </ui>

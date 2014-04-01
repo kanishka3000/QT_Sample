@@ -18,13 +18,15 @@ public:
 
 	void Init(BaseWnd* pParent) ;
 	void PopulateFromExecutionReport(ExecutionReport* pReport);
+
 public slots:
 	void OnSubmit();
 	void OnInstrumentSelected(QString sInstrument);
 	void OnInstrumentSelected(Instrument* pInstrument, QString sOrderBook);
-
 	void PopulateCurrentOrder();
 	void OnSideChanged(int iIndex);
+	void OnTIFChanged(QString sTif);
+	void OnOrderTypeChanged(QString sOrderType);
 
 signals:
 	void OnNewOrder(NewOrder* pNewOrder);
